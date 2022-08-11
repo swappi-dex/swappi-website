@@ -1,0 +1,75 @@
+@media screen and (max-width: 460px) {
+    .swiper {
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+    }
+    .swiper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .swiper > div {
+        scroll-snap-align: center;
+    }
+}
+
+.feature {
+    @apply relative flex flex-col justify-between flex-grow-0 flex-shrink-0 px-32px pt-36px pb-32px bg-white border-1px border-#AAD0FF rounded-20px w-372px h-520px overflow-visible
+    lt-mobile:w-306rem lt-mobile:h-444rem lt-mobile:px-26rem lt-mobile:pt-24rem lt-mobile:pb-22rem  lt-mobile:rounded:20rem;
+}
+
+.feature-navArea {
+    @apply p-24px rounded-20px border-1px border-#AAD0FF lt-mobile:p-24rem lt-mobile:pr-12rem;
+    background: linear-gradient(102.58deg, #aad0ff -22.65%, #f3f7f9 36.62%, #f3fbee 95.5%), rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 1px 0px #aad0ff;
+}
+
+.feature-navArea > p:first-child {
+    @apply text-24px text-#184B4F lt-mobile:text-20rem;
+}
+
+.feature-navArea > div:last-child {
+    @apply flex mt-34px justify-between items-center lt-mobile:mt-24rem;
+}
+
+.feature-navArea > div:last-child > p:first-child {
+    @apply text-14px text-#184B4F w-98px translate-y-1.5px lt-mobile:text-12rem lt-mobile:translate-y-1.5rem;
+}
+
+.feature-navArea > div:last-child > a:last-child {
+    @apply block w-132px h-48px leading-48px rounded-40px border-1px border-#184B4F text-14px text-#184B4F text-center
+    lt-mobile:w-90rem lt-mobile:h-34rem lt-mobile:leading-34rem lt-mobile:rounded-40rem lt-mobile:text-14rem;
+}
+
+.exchange-token {
+    @apply w-116px h-42px leading-42px border-2px border-#B6DD76 rounded-100px text-24px text-#184B4F text-center
+    lt-mobile:w-96rem lt-mobile:h-34rem lt-mobile:leading-34rem lt-mobile:text-19rem;
+}
+
+.lottery-ball {
+    @apply relative flex-shrink-0 flex-grow-0 w-20px h-20px text-15px leading-20px text-center
+    lt-mobile:w-17rem lt-mobile:h-17rem lt-mobile:leading-17rem lt-mobile:text-13rem;
+}
+
+.lottery-ball::before {
+    @apply absolute;
+    content: '';
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 190%;
+    height: 190%;
+    border-radius: 50%;
+    border: 1px solid #184B4F
+}
+
+.lottery-ball::after {
+    @apply absolute lt-mobile:border-4rem;
+    content: '';
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 145%;
+    height: 145%;
+    border-radius: 50%;
+    border: 5px solid transparent
+}

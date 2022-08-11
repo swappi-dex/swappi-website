@@ -1,0 +1,29 @@
+{
+    "name": "swappi",
+    "version": "0.0.0",
+    "private": true,
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
+    "scripts": {
+        "dev:website": "turbo run dev --scope=website",
+        "build:website": "turbo run build --scope=website",
+        "lint": "turbo run lint",
+        "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+        "preinstall": "npx only-allow pnpm"
+    },
+    "devDependencies": {
+        "eslint-config-custom": "workspace:*",
+        "prettier": "latest",
+        "turbo": "latest",
+        "typescript": "latest",
+        "only-allow": "latest"
+    },
+    "engines": {
+        "npm": ">=7.0.0",
+        "node": ">=14.0.0"
+    },
+    "dependencies": {},
+    "packageManager": "pnpm@7.8.0"
+}

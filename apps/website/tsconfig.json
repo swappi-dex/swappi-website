@@ -1,0 +1,12 @@
+{
+    "extends": "tsconfig/website.json",
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "@assets/*": ["./src/assets/*"],
+            "@utils/*": ["./src/utils/*"]
+        }
+    },
+    "include": ["**/*.ts", "**/*.tsx"],
+    "exclude": ["dist", "build", "node_modules"]
+}
