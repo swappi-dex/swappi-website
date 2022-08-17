@@ -50,19 +50,19 @@ function Footer() {
                     <a href="https://forms.gle/xjpxQhrqPFnG2ybSA" target="_blank" rel="noopener noreferrer">
                         Token listing
                     </a>
-                    <a href="https://swappi.io/#/farming" target="_blank" rel="noopener noreferrer">
+                    <a href="https://app.swappi.io/#/farming" target="_blank" rel="noopener noreferrer">
                         Farming
                     </a>
                     <a href="https://forms.gle/xjpxQhrqPFnG2ybSA" target="_blank" rel="noopener noreferrer">
                         Apply for Farm
                     </a>
-                    <a href="https://swappi.io/#/launchpad" target="_blank" rel="noopener noreferrer">
+                    <a href="https://app.swappi.io/#/launchpad" target="_blank" rel="noopener noreferrer">
                         LaunchPad
                     </a>
                     <a href="https://immunefi.com/bounty/swappi/" target="_blank" rel="noopener noreferrer">
                         Bug Bounty
                     </a>
-                    <a href="https://swappi.io/#/lottery" target="_blank" rel="noopener noreferrer">
+                    <a href="https://app.swappi.io/#/lottery" target="_blank" rel="noopener noreferrer">
                         Lottery
                     </a>
                 </div>

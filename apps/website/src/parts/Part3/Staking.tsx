@@ -26,7 +26,7 @@ function Staking() {
 
                 <div>
                     <p>Stake $PPI to Boost your farming</p>
-                    <a className="shadow-black" href="https://swappi.io/#/staking" rel="noopener noreferrer">Staking</a>
+                    <a className="shadow-black" href="https://app.swappi.io/#/staking" rel="noopener noreferrer">Staking</a>
                 </div>
             </div>
 

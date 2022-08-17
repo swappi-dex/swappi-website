@@ -31,7 +31,7 @@ function Exchange() {
 
                 <div>
                     <p>Swap crypto tokens</p>
-                    <a className="shadow-black" href="https://swappi.io/#/swap" rel="noopener noreferrer">
+                    <a className="shadow-black" href="https://app.swappi.io/#/swap" rel="noopener noreferrer">
                         Swap
                     </a>
                 </div>

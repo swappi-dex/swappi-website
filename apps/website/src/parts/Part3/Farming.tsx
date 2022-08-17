@@ -24,7 +24,7 @@ function Farming() {
 
                 <div>
                     <p>Stake LP tokens to earn $PPI</p>
-                    <a className="shadow-black" href="https://swappi.io/#/farming" rel="noopener noreferrer">Farming</a>
+                    <a className="shadow-black" href="https://app.swappi.io/#/farming" rel="noopener noreferrer">Farming</a>
                 </div>
             </div>
 

@@ -59,7 +59,7 @@ function Part1() {
                 lt-mobile-text="18rem"
                 lt-mobile-bg="#EBF4FF"
                 lt-mobile-rounded="200rem"
-                href="https://swappi.io/#/swap"
+                href="https://app.swappi.io/#/swap"
                 target="_blank"
                 rel="noopener noreferrer"
             >

@@ -54,7 +54,7 @@ function Liquidity() {
 
                 <div>
                     <p>Add liquidity to earn exchange fees</p>
-                    <a className="shadow-black" href="https://swappi.io/#/pool/v2" rel="noopener noreferrer">Add</a>
+                    <a className="shadow-black" href="https://app.swappi.io/#/pool/v2" rel="noopener noreferrer">Add</a>
                 </div>
             </div>
 

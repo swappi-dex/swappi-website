@@ -47,7 +47,7 @@ function Navbar() {
                 text="15px #184B4F"
                 font="bold"
                 lt-mobile-display="none"
-                href="https://swappi.io/#/swap"
+                href="https://app.swappi.io/#/swap"
                 target="_blank"
                 rel="noopener noreferrer"
             >
