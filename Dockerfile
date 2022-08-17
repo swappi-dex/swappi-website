@@ -26,3 +26,11 @@ WORKDIR /app
 RUN pnpm install
 COPY apps/ apps/
 RUN pnpm build:website
+
+FROM nginx:alpine
+# Set working directory to nginx asset directory
+WORKDIR /usr/share/nginx/html
+RUN rm -rf ./*
+# Copy static assets over
+COPY --from=builder ./apps/website/dist* ./
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
