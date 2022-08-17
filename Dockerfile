@@ -29,8 +29,8 @@ RUN pnpm build:website
 
 FROM nginx:alpine
 # Set working directory to nginx asset directory
-WORKDIR /usr/share/nginx/html
+WORKDIR 
 RUN rm -rf ./*
 # Copy static assets over
-COPY --from=builder ./apps/website/dist* ./
+COPY --from=builder ./apps/website/dist/* ./
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
