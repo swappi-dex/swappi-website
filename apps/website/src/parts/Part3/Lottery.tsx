@@ -121,7 +121,7 @@ function Lottery() {
 
                 <div>
                     <p>Buy tickets to win big prize</p>
-                    <a className="shadow-black" href="https://swappi.io/#/lottery" rel="noopener noreferrer">Get Tickets</a>
+                    <a className="shadow-black" href="https://app.swappi.io/#/lottery" rel="noopener noreferrer">Get Tickets</a>
                 </div>
             </div>
 

@@ -27,13 +27,13 @@ function Dropdown({ onClickClose }: { onClickClose: VoidFunction }) {
                     <a href="https://info.swappi.io/" target="_blank" rel="noopener noreferrer">
                         Analytics
                     </a>
-                    <a href="https://swappi.io/#/farming" target="_blank" rel="noopener noreferrer">
+                    <a href="https://app.swappi.io/#/farming" target="_blank" rel="noopener noreferrer">
                         Farming
                     </a>
-                    <a href="https://swappi.io/#/launchpad" target="_blank" rel="noopener noreferrer">
+                    <a href="https://app.swappi.io/#/launchpad" target="_blank" rel="noopener noreferrer">
                         LaunchPad
                     </a>
-                    <a href="https://swappi.io/#/lottery" target="_blank" rel="noopener noreferrer">
+                    <a href="https://app.swappi.io/#/lottery" target="_blank" rel="noopener noreferrer">
                         Lottery
                     </a>
                 </div>
