@@ -9,7 +9,6 @@ ARG NPM_TOKEN
 ARG PACKAGE_NAME=""
 ENV NPM_CONFIG_LOGLEVEL error
 WORKDIR /app
-COPY pnpm-lock.yaml .
 COPY pnpm-workspace.yaml .
 COPY .eslintrc.js .
 COPY .gitignore .
