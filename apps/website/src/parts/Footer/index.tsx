@@ -1,7 +1,7 @@
 import useSWR from 'swr';
 import { fetchCurrentEpochNumber } from '@utils/fetch';
 import Swappi from '@assets/Navbar/swappi.png';
-import CERTIK from '@assets/Footer/certik.png';
+import CERTIK from '@assets/Footer/CERTIK.png';
 import './index.css';
 
 function Footer() {
