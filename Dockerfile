@@ -25,5 +25,4 @@ WORKDIR /app
 # install dependencies for the selected package and its dependencies (direct and non-direct)
 RUN pnpm install
 COPY apps/ apps/
-COPY node_modules/ node_modules/
 RUN pnpm build:website
