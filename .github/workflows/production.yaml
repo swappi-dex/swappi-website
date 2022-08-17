@@ -3,7 +3,7 @@ name: Swappi Website
 on:
   push:
     branches:
-      - 'dev'
+      - 'main'
 
 env:
   NAME: swappi-website
