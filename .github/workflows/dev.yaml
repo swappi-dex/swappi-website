@@ -27,22 +27,22 @@ jobs:
         run: |
           docker tag $NAME $REGISTRY/$NAME
           docker push $REGISTRY/$NAME
-  # Deploy:
-  #   needs: Build
-  #   runs-on: ubuntu-latest
-  #   permissions:
-  #     packages: read
-  #   steps:
-  #     - name: SSH & Cleanup & Auth & Pull & Run
-  #       env:
-  #         PRIVATE_KEY: ${{ secrets.AWS_PRIVATE_KEY }}
-  #       run: |
-  #         echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
-  #         ssh -o StrictHostKeyChecking=no -i private_key ec2-user@ec2-54-251-114-35.ap-southeast-1.compute.amazonaws.com "
-  #           echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-  #           docker pull $REGISTRY/$NAME
-  #           docker tag $REGISTRY/$NAME $NAME
-  #           docker stop $NAME && docker rm $NAME
-  #           docker run -d --name $NAME --restart=always --env PORT=5300 -p 5300:5300 $NAME
-  #           docker system prune -a -f
-  #         "
+  Deploy:
+    needs: Build
+    runs-on: ubuntu-latest
+    permissions:
+      packages: read
+    steps:
+      - name: SSH & Cleanup & Auth & Pull & Run
+        env:
+          PRIVATE_KEY: ${{ secrets.AWS_PRIVATE_KEY }}
+        run: |
+          echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
+          ssh -o StrictHostKeyChecking=no -i private_key ec2-user@ec2-54-251-114-35.ap-southeast-1.compute.amazonaws.com "
+            echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+            docker pull $REGISTRY/$NAME
+            docker tag $REGISTRY/$NAME $NAME
+            docker stop $NAME && docker rm $NAME
+            docker run -d --name $NAME --restart=always -p 5350:80 $NAME
+            docker system prune -a -f
+          "
