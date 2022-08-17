@@ -32,5 +32,5 @@ FROM nginx:alpine
 WORKDIR /app
 RUN rm -rf ./*
 # Copy static assets over
-COPY --from=builder apps/website/dist/* ./usr/share/nginx/html/
+COPY --from=builder /app/apps/website/dist/* ./usr/share/nginx/html/
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
