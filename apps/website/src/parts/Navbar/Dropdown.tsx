@@ -21,9 +21,6 @@ function Dropdown({ onClickClose }: { onClickClose: VoidFunction }) {
                 </header>
 
                 <div className="dropdown-navlink">
-                    <a href="https://www.fluentwallet.com/" target="_blank" rel="noopener noreferrer">
-                        Wallet
-                    </a>
                     <a href="https://info.swappi.io/" target="_blank" rel="noopener noreferrer">
                         Analytics
                     </a>
