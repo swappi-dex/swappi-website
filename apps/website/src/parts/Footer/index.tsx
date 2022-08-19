@@ -38,9 +38,6 @@ function Footer() {
                     lt-mobile-text="15rem"
                     lt-mobile-leading="36rem"
                 >
-                    <a href="https://www.fluentwallet.com/" target="_blank" rel="noopener noreferrer">
-                        Wallet
-                    </a>
                     <a href="https://docs.swappi.io/swappi/" target="_blank" rel="noopener noreferrer">
                         Documentation
                     </a>
