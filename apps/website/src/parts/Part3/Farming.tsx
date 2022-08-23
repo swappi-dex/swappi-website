@@ -1,6 +1,7 @@
 import useSWR from 'swr';
 import { fetchPPIRewardToday, fetchPPIPrice } from '@utils/fetch';
 import { Unit } from '@cfxjs/use-wallet-react/ethereum';
+import { numberWithCommas } from '@utils/numFormat';
 
 function Farming() {
     const { data: ppiRewardToday } = useSWR('ppiRewardToday', fetchPPIRewardToday, { refreshInterval: 5000 });
@@ -15,7 +16,7 @@ function Farming() {
                 </p>
                 <div un-my="40px" h="1px" bg="#184b4f" opacity="30" select="none" lt-mobile-my="36rem" />
                 <p text="40px" un-leading="40px" un-pl="8rem" font="bold" lt-mobile-text="35rem" lt-mobile-leading="40rem">
-                    {totalRewardsToday ? `$${totalRewardsToday}` : '--'}
+                    {totalRewardsToday ? `$${numberWithCommas(totalRewardsToday)}` : '--'}
                 </p>
             </div>
 
