@@ -1,6 +1,7 @@
 import useSWR from 'swr';
 import { Unit } from '@cfxjs/use-wallet-react/ethereum';
 import { fetchFactories, fetchPPIPrice, fetchStakingInfo } from '@utils/fetch';
+import { numberWithCommas } from '@utils/numFormat';
 import './index.css';
 
 function Part2() {
@@ -37,8 +38,8 @@ function Part2() {
                 lt-mobile-h="288rem"
             >
                 <div>
-                    <p className="part2-textShadow" text="45px" un-leading="113.5%" lt-mobile-text="18rem">
-                        {factories?.totalLiquidityUSD ? `$${Number(factories.totalLiquidityUSD).toFixed(2)}` : '--'}
+                    <p className="part2-textShadow" text="43px" un-leading="113.5%" lt-mobile-text="18rem">
+                        {factories?.totalLiquidityUSD ? `$${numberWithCommas(Number(factories.totalLiquidityUSD).toFixed(2))}` : '--'}
                     </p>
                     <p text="14px" un-leading="14px" lt-mobile-text="12rem" lt-mobile-leading="14rem" lt-mobile-mt="12rem">
                         Total Liquidity
@@ -48,8 +49,8 @@ function Part2() {
                 <div h="2px" bg="#184b4f30" />
 
                 <div>
-                    <p className="part2-textShadow" text="45px" un-leading="113.5%" lt-mobile-text="18rem">
-                        {factories?.totalVolumeUSD ? `$${Number(factories.totalVolumeUSD).toFixed(2)}` : '--'}
+                    <p className="part2-textShadow" text="43px" un-leading="113.5%" lt-mobile-text="18rem">
+                        {factories?.totalVolumeUSD ? `$${numberWithCommas(Number(factories.totalVolumeUSD).toFixed(2))}` : '--'}
                     </p>
                     <p text="14px" un-leading="14px" lt-mobile-text="12rem" lt-mobile-leading="14rem" lt-mobile-mt="12rem">
                         Volume (24hr)
@@ -59,8 +60,8 @@ function Part2() {
                 <div h="2px" bg="#184b4f30" />
 
                 <div>
-                    <p className="part2-textShadow" text="45px" un-leading="113.5%" lt-mobile-text="18rem">
-                        {marketCap ? `$${marketCap}` : '--'}
+                    <p className="part2-textShadow" text="43px" un-leading="113.5%" lt-mobile-text="18rem">
+                        {marketCap ? `$${numberWithCommas(marketCap)}` : '--'}
                     </p>
                     <p text="14px" un-leading="14px" lt-mobile-text="12rem" lt-mobile-leading="14rem" lt-mobile-mt="12rem">
                         $PPI Market Cap

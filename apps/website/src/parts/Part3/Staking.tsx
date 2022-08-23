@@ -1,5 +1,6 @@
 import useSWR from 'swr';
 import { fetchStakingInfo } from '@utils/fetch';
+import { numberWithCommas } from '@utils/numFormat';
 
 function Staking() {
     const { data: stakingInfo } = useSWR('stakingInfo', fetchStakingInfo, { refreshInterval: 5000 });
@@ -11,7 +12,7 @@ function Staking() {
                     Total Staked PPI:
                 </p>
                 <p un-mt="18px" text="40px" un-leading="40px" font="bold" lt-mobile-text="25rem" lt-mobile-leading="25rem" lt-mobile-px="8rem">
-                    {stakingInfo?.totalLocked?.toDecimalStandardUnit(2) ?? '--'}
+                    {stakingInfo?.totalLocked ? numberWithCommas(stakingInfo.totalLocked.toDecimalStandardUnit(2)) : '--'}
                 </p>
 
 
