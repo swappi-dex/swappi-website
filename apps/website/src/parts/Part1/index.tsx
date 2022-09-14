@@ -37,7 +37,7 @@ function Part1() {
                 lt-mobile-mt="24rem"
                 lt-mobile-px="32rem"
             >
-                Making blockchain world truly reach the hearts and minds of people.
+                The leading DEX on Conflux eSpace.
             </p>
 
             <a
