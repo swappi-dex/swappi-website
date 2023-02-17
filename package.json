@@ -18,8 +18,7 @@
         "only-allow": "latest",
         "prettier": "latest",
         "turbo": "1.6.3",
-        "typescript": "latest",
-        "only-allow": "latest"
+        "typescript": "latest"
     },
     "engines": {
         "npm": ">=7.0.0",
