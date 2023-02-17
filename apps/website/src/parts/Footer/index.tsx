@@ -10,7 +10,7 @@ function Footer() {
             <div className="footer-upper">
                 <img
                     src={Swappi}
-                    alt="swappi logo"
+                    alt="Swappi Logo"
                     draggable={false}
                     display="block"
                     flex="shrink-0 grow-0"

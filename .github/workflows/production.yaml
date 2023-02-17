@@ -38,7 +38,7 @@ jobs:
           PRIVATE_KEY: ${{ secrets.AWS_PRIVATE_KEY }}
         run: |
           echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
-          ssh -o StrictHostKeyChecking=no -i private_key ec2-user@ec2-54-251-114-35.ap-southeast-1.compute.amazonaws.com "
+          ssh -o StrictHostKeyChecking=no -i private_key ec2-user@ec2-54-169-36-7.ap-southeast-1.compute.amazonaws.com "
             echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
             docker pull $REGISTRY/$NAME
             docker tag $REGISTRY/$NAME $NAME

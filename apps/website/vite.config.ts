@@ -6,6 +6,7 @@ import presetIcons from '@unocss/preset-icons';
 import presetUno from '@unocss/preset-uno';
 import presetAttributify from '@unocss/preset-attributify';
 import transformerDirective from '@unocss/transformer-directives';
+import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
     plugins: [
@@ -29,6 +30,14 @@ export default defineConfig({
             },
         }),
         react(),
+        VitePWA({
+            selfDestroying: true,
+            filename: 'service-worker.js',
+            manifestFilename: 'manifest.json',
+            devOptions: {
+                enabled: true,
+            },
+        }),
     ],
     resolve: {
         alias: {
