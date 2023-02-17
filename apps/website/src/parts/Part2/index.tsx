@@ -53,7 +53,7 @@ function Part2() {
                         {factories?.totalVolumeUSD ? `$${numberWithCommas(Number(factories.totalVolumeUSD).toFixed(2))}` : '--'}
                     </p>
                     <p text="14px" un-leading="14px" lt-mobile-text="12rem" lt-mobile-leading="14rem" lt-mobile-mt="12rem">
-                        Volume (24hr)
+                        Volume
                     </p>
                 </div>
 
