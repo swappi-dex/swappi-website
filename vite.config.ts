@@ -31,11 +31,11 @@ export default defineConfig({
         }),
         react(),
         VitePWA({
-          selfDestroying: true,
-          filename: 'service-worker.js',
-          manifestFilename: 'manifest.json',
-          devOptions: {
-              enabled: true,
+            selfDestroying: true,
+            filename: 'service-worker.js',
+            manifestFilename: 'manifest.json',
+            devOptions: {
+                enabled: true,
           },
       }),
     ],
