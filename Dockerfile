@@ -25,12 +25,12 @@ WORKDIR /app
 # install dependencies for the selected package and its dependencies (direct and non-direct)
 RUN pnpm install
 COPY apps/ apps/
-RUN pnpm build:website
+RUN pnpm build
 
 FROM nginx:alpine
 # Set working directory to nginx asset directory
 WORKDIR /app
 RUN rm -rf ./*
 # Copy static assets over
-COPY --from=builder /app/apps/website/dist /usr/share/nginx/html/
+COPY --from=builder /app/dist /usr/share/nginx/html/
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
