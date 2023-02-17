@@ -17,7 +17,7 @@
         "eslint-config-custom": "workspace:*",
         "only-allow": "latest",
         "prettier": "latest",
-        "turbo": "^1.7.4",
+        "turbo": "1.6.3",
         "typescript": "latest"
     },
     "engines": {
