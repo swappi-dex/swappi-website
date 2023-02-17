@@ -36,8 +36,8 @@ export default defineConfig({
             manifestFilename: 'manifest.json',
             devOptions: {
                 enabled: true,
-          },
-      }),
+            },
+        }),
     ],
     resolve: {
         alias: {
