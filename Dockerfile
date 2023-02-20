@@ -13,6 +13,7 @@ COPY .eslintrc.js .
 COPY .gitignore .
 COPY *.json ./
 COPY index.html .
+COPY package.json .
 RUN echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
 # COPY all libs ...
 
@@ -22,6 +23,9 @@ ARG PACKAGE_NAME=""
 WORKDIR /app
 # install dependencies for the selected package and its dependencies (direct and non-direct)
 RUN pnpm install
+COPY src/ src/
+COPY public/ public/
+COPY dev-dist/ dev-dist/
 RUN pnpm build
 
 FROM nginx:alpine
