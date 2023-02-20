@@ -11,7 +11,7 @@ ENV NPM_CONFIG_LOGLEVEL error
 WORKDIR /app
 COPY .eslintrc.js .
 COPY .gitignore .
-COPY *.json .
+COPY *.json ./
 RUN echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
 COPY package.json .
 # COPY all libs ...
@@ -22,8 +22,8 @@ ARG PACKAGE_NAME=""
 WORKDIR /app
 # install dependencies for the selected package and its dependencies (direct and non-direct)
 RUN pnpm install
-COPY index.html /app
-COPY src /app
+COPY index.html /app/
+COPY src /app/
 RUN pnpm build
 
 FROM nginx:alpine
