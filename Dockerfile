@@ -9,11 +9,11 @@ ARG NPM_TOKEN
 ARG PACKAGE_NAME=""
 ENV NPM_CONFIG_LOGLEVEL error
 WORKDIR /app
-COPY .eslintrc.js .
-COPY .gitignore .
-COPY *.json ./
+COPY .eslintrc.js /app
+COPY .gitignore /app
+COPY *.json /app/
 RUN echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-COPY package.json .
+COPY package.json /app
 # COPY all libs ...
 
 
@@ -22,8 +22,13 @@ ARG PACKAGE_NAME=""
 WORKDIR /app
 # install dependencies for the selected package and its dependencies (direct and non-direct)
 RUN pnpm install
-COPY index.html /app/
-COPY src ./
+
+COPY dev-dist/ dev-dist/
+COPY public public/
+COPY src/ src/
+COPY index.html .
+COPY vite.config.ts .
+COPY prettier.config.js .
 RUN pnpm build
 
 FROM nginx:alpine
