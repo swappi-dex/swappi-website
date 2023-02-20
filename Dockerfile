@@ -12,6 +12,7 @@ WORKDIR /app
 COPY .eslintrc.js .
 COPY .gitignore .
 COPY *.json ./
+COPY index.html .
 RUN echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
 # COPY all libs ...
 
