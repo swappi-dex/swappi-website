@@ -22,10 +22,6 @@ ARG PACKAGE_NAME=""
 WORKDIR /app
 # install dependencies for the selected package and its dependencies (direct and non-direct)
 RUN pnpm install
-COPY index.html /
-COPY src/ /
-COPY public/ /
-COPY dev-dist/ /
 RUN pnpm build
 
 FROM nginx:alpine
