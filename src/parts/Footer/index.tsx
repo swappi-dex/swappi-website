@@ -104,7 +104,7 @@ export function FooterUnder({ inNavbar }: { inNavbar?: boolean }) {
                 </div>
 
                 <div display="flex" flex="col" lt-mobile-display={inNavbar ? 'none' : 'flex'}>
-                    2022 Swappi. All rights reserved
+                    2023 Swappi. All rights reserved
                     <div
                         display="flex"
                         un-items="center"
