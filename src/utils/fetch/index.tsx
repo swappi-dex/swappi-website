@@ -8,7 +8,7 @@ export const coreNetwork = {
     chainId: '1029',
     chainName: 'Conflux Hydra',
     rpcUrls: ['https://main.confluxrpc.com'],
-    blockExplorerUrls: ['https://confluxscan.net'],
+    blockExplorerUrls: ['https://confluxscan.org'],
     nativeCurrency: {
         name: 'Conflux',
         symbol: 'CFX',
@@ -20,7 +20,7 @@ export const eSpaceNetwork = {
     chainId: '1030',
     chainName: 'Conflux eSpace',
     rpcUrls: ['https://evm.confluxrpc.com'],
-    blockExplorerUrls: ['https://evm.confluxscan.net'],
+    blockExplorerUrls: ['https://evm.confluxscan.org'],
     nativeCurrency: {
         name: 'Conflux',
         symbol: 'CFX',
